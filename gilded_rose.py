@@ -17,7 +17,7 @@ class GildedRose(object):
     def regularItem(self, item):
         if item.quality > 50:
             logging.warning(f"Product quality of {item.name} is more than 50, pls check.")
-        elif item.quality <= 0:
+        elif item.quality < 0:
             logging.warning(f"Product quality of {item.name} is negative, pls check.")
         elif 50 >= item.quality >= 2:
             if item.sell_in <= 0:
